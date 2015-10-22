@@ -19,6 +19,7 @@ class CreateProductsTable extends Migration
             $table->decimal('price');
             $table->float('discount');
             $table->integer('category');
+            $table->string('description');
             $table->foreign('category')->references('id')->on('product_categories')->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();
         });
