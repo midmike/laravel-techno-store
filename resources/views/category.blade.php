@@ -3,9 +3,9 @@ use App\product;
 use App\product_category;
 $setting=DB::table('settings')->take(1)->get();
 ?>
-@extends('layouts.master')
+@extends('layouts.noslidelayout')
 
-@section('title', 'Welcome')
+@section('title', 'Category')
 @section('content')
 <div class="maincontent-area">
 	<div class="container">
@@ -65,7 +65,7 @@ $setting=DB::table('settings')->take(1)->get();
 		<?php }?>
 		</ul>
 	</div>
-	<div class="tab-content container">
+	<div class="container">
 		<?php $i = - 1;
 		foreach ($allCate as $cate) {
 			$i ++;

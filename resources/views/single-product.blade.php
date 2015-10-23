@@ -3,13 +3,12 @@
 
 @section('content')
 <div class="single-product-area">
-	<div class="zigzag-bottom"></div>
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
 				<div class="product-content-right">
 					<div class="product-breadcroumb">
-						<a href="">Home</a> <a href="">Category Name</a> <a href="">Sony
+						<a href="/">Home</a> <a href="">Category Name</a> <a href="">Sony
 							Smart TV - 2015</a>
 					</div>
 
