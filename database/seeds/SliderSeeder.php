@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class Product_CategoriesSeeder extends Seeder
+class SliderSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,7 +11,6 @@ class Product_CategoriesSeeder extends Seeder
      */
     public function run()
     {
-        //
-        factory(App\product_categories::class,5)->create();
+        factory(App\Slider::class,3)->create();
     }
 }

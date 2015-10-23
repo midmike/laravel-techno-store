@@ -22,7 +22,7 @@ $factory->define(App\User::class, function ($faker) {
 $factory->define(App\product::class, function ($faker) {
     $collection = collect([10,20,50,200,500,800,600]);
     $collec_discount = collect([10,20,50,25,87,80,60]);
-    $collec_discount = collect([1,2,3,4,5]);
+    $collec_discount = collect([1,2,3,4,5,7,8,9,10]);
     $coll_image = collect([1,2,3,4,5]);
     return [
         'name' => str_random(5),
@@ -36,5 +36,12 @@ $factory->define(App\product::class, function ($faker) {
 $factory->define(App\product_categories::class, function ($faker) {
     return [
         'name' => str_random(5),
+    ];
+});
+$factory->define(App\Slider::class, function ($faker) {
+    $coll_image = collect([1,2,3]);
+    return [
+        'image_path' => "slide-".$coll_image->random().".jpg",
+        'text_content' => str_random(50) 
     ];
 });

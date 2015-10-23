@@ -16,7 +16,7 @@ class ProductSeeder extends Seeder
         // DB::table("product_categories")->insert([
         //    'name'=>str_random(5)
         // ]);
-        factory(App\product::class,5)->create()->each(function ($product) {
+        factory(App\product::class,80)->create()->each(function ($product) {
             //$product->category()->save(factory(App\product_categories::class)->make()); 
         });
     }
