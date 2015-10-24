@@ -32,6 +32,9 @@ Route::get('/product/{id}',function () {
 Route::get('/product',function () {
 	return view('single-product');
 });
+Route::get('/category/{name}',function () {
+	return view('category');
+});
 Route::get('/create','productController@create');
 // Authentication routes...
 Route::get('auth/login', 'Auth\AuthController@validator');
@@ -42,3 +45,10 @@ Route::get('auth/logout', 'Auth\AuthController@getLogout');
 Route::get('auth/register', 'Auth\AuthController@getRegister');
 Route::post('auth/register', 'Auth\AuthController@postRegister');
 
+//SERVICE
+Route::get('/sliderService', function () {
+	return App\Slider::paginate();
+});
+Route::get('/productService', function () {
+	return App\product::paginate();
+});

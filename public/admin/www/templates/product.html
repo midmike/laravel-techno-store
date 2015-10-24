@@ -1,0 +1,26 @@
+<ion-view view-title="Product">
+  <ion-content>
+  	<div class="bar bar-header bar-stable">
+    	<div class="button-bar">
+    		<button class="button button-positive">New</button>
+    		<button class="button button-assertive">Delete</button>
+    	</div>
+    </div>
+    <br><br>
+    <ion-refresher pulling-text="Pull to refresh.." on-refresh="refresh()"></ion-refresher>
+    <ion-list>
+      <ion-item ng-repeat="product in products" href="#/app/product/{{product.id}}" class="item item-thumbnail-left">
+        <img src="/img/{{product.imagepath}}" alt="">
+        <h3>Name: {{product.name}}</h3>
+        <h4<i>Price: {{product.price}}</i></h4>
+        <h4<i>Discount: {{product.discount}}</i></h4>
+        <p>Description: {{product.description}}</p>
+      </ion-item>
+    </ion-list>
+    <br><br>
+    <div class="bar bar-footer bar-stable">
+    	<button class="button pull-left" ng-click="previous()">Previous</button>
+    	<button class="button pull-right" ng-click="next()">Next</button>
+    </div>
+  </ion-content>
+</ion-view>

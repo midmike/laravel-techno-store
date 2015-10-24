@@ -1,0 +1,23 @@
+<ion-view view-title="Slider">
+  <ion-content>
+  	<div class="bar bar-header bar-stable">
+    	<div class="button-bar">
+    		<button class="button button-positive">New</button>
+    		<button class="button button-assertive">Delete</button>
+    	</div>
+    </div>
+    <br><br>
+    <ion-refresher pulling-text="Pull to refresh.." on-refresh="refresh()"></ion-refresher>
+    <ion-list>
+      <ion-item ng-repeat="slider in sliders" href="#/app/sliderdetail/{{slider.id}}" class="item item-thumbnail-left">
+        <img src="/img/{{slider.image_path}}" alt="">
+        <p>{{slider.text_content}}</p>
+      </ion-item>
+    </ion-list>
+    <br><br>
+    <div class="bar bar-footer bar-stable">
+    	<button class="button pull-left" ng-click="previous()">Previous</button>
+    	<button class="button pull-right" ng-click="next()">Next</button>
+    </div>
+  </ion-content>
+</ion-view>

@@ -71,7 +71,7 @@
                             <div class="slide-text">
                                 <div class="container">
                                     <div class="row">
-                                        <div class="col-md-6 col-md-offset-6">
+                                        <div class="col-sm-12">
                                             <div class="slide-content">
                                                 <?php echo $slider->text_content;?>
                                             </div>
