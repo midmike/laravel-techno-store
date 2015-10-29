@@ -1,2 +1,2 @@
 # laravel-techno-store
-For learning on laravel only.
+For learning on laravel & ionic(admin page) only.
